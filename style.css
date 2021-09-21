@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* force scroll bar */
+body {
+  overflow-y: scroll;
+}
+
+/* navbar */
+.navbar {
+  background-image: linear-gradient(#0C0C0C, #262626);
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 35px;
+  font-family: 'Playball', cursive;
+}
+
+#chinese {
+  font-size: 25px;
+  font-family: 'Ma Shan Zheng', cursive;
+}
+
+.navbar-brand:hover {
+  color: #0096FF;
+}
+
+.nav-link {
+  color: white;
+  width: 115px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 2px solid transparent;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.nav-link:focus {
+  color: white;
+}
+
+.nav-link:hover, .navbar .active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* button */
+.btn {
+  color: black;
+  border: 3px solid black;
+  width: 115px;
+  font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
+  background-color: white;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: white;
+  border: 3px solid black;
+  background-color: black;
+}
+
+/* home page */
+.home {
+  background: url(./img/Profile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  height: 100vh;
+  width: 100%;
+  padding-top: 32vh;
+}
+
+.home .outputRow {
+  height: 341px;
+}
+
+.command {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  padding: 35px;
+  padding-top: 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+#hello {
+  font-size: 45px;
+}
+
+.home p {
+  font-size: 18px;
+}
+
+/* command line cursor */
+#output::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 21px;
+  border-bottom: 4px solid white;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dashedLine {
+  background: repeating-linear-gradient(to right, white, white 7px, transparent 7px, transparent 11px);
+  height: 1px;
+}
+
+/* project page */
+.projectTitle {
+  background-image: url(./img/Projects.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 45px;
+  font-family: 'Black Ops One', cursive;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.projects {
+  padding-top: 20px;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.projects .card {
+  width: 18rem;
+}
+
+.card-img-top {
+  height: 15rem;
+  border-bottom: 1px solid black;
+}
+
+.card-footer {
+  background-color: transparent;
+}
+
+/* gallery page */
+.galleryTitle {
+  padding-top: 120px;
+  font-size: 45px;
+  font-family: 'Black Ops One', cursive;
+}
+
+.gallery {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.gallery video {
+  height: 100%;
+  width: 100%;
+}
+
+/* contact page */
+.contactTitle {
+  padding-top: 120px;
+  font-size: 45px;
+  font-family: 'Black Ops One', cursive;
+}
+
+.contact .container {
+  padding-top: 5px;
+  padding-left: 300px;
+  padding-right: 300px;
+  font-size: 19px;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.contact input, .contact textarea {
+  border: 1px solid black;
+}
+
+.contact input:focus, .contact textarea:focus {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.links .nav {
+  padding-top: 38px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* font awesome */
+.fab {
+  color: black;
+}
+
+/* responsive */
+@media (max-width: 767.5px) {
+
+  /* navbar */
+  .nav-link {
+    border: transparent;
+    border-bottom: 2px solid white;
+    width: 100%;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .navbar .active::before {
+    font-size: 20px;
+    font-weight: bold;
+    content: '>\00a0\00a0\00a0';
+  }
+
+  .navbar .active::after {
+    font-size: 20px;
+    font-weight: bold;
+    content: '\00a0\00a0\00a0<';
+  }
+
+  .navbar-brand {
+    font-size: 25px;
+  }
+
+  #chinese {
+    font-size: 20px;
+  }
+
+  .navbar .navbar-toggler {
+    box-shadow: none;
+    padding-right: 0px;
+  }
+
+  .navbar-toggler.collapsed::after {
+    content: "\00F7";
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    bottom: .1em;
+  }
+
+  .navbar-toggler::after {
+    content: "\00D7";
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    bottom: .1em;
+  }
+
+  /* home page */
+  .home {
+    background: url(./img/ProfileMobile.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding: 0;
+    border: 25px solid transparent;
+    border-top: 90px solid transparent;
+  }
+
+  .home .outputRow {
+    padding: 0;
+    padding-top: 88%;
+  }
+
+  .command {
+    border-radius: 0;
+    padding: 0;
+    height: 209px;
+    background-color: transparent;
+  }
+
+  #hello {
+    font-size: 25px;
+  }
+
+  .home p {
+    font-size: 13px;
+  }
+
+  #output::after {
+    height: 17px;
+  }
+
+  /* gallery page */
+  .galleryTitle {
+    font-size: 30px;
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  /* projects page */
+  .projectTitle {
+    font-size: 30px;
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .projects {
+    padding-top: 10px;
+  }
+
+  /* contact page */
+  .contactTitle {
+    font-size: 30px;
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .contact .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+  }
+
+  .links .nav-item {
+    font-size: 15px;
+    margin: -5px;
+  }
+}
