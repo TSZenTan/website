@@ -1,5 +1,5 @@
 // Array to store output
-const output = ["> I’m a graduate in Computer Science", "> My interest is in AI & Machine Learning", ">", "> E-mail" + "\xa0\xa0\xa0" + ": z3n.t4n@gmail.com", "> Phone" + "\xa0\xa0\xa0\xa0" + ": +65 92225216 / +44 7749471065", "> Location : Singapore"];
+const output = ["> I’m a graduate in Computer Science", "> My interest is in Data Science & Machine Learning", ">", "> E-mail" + "\xa0\xa0\xa0" + ": z3n.t4n@gmail.com", "> Phone" + "\xa0\xa0\xa0\xa0" + ": +65 92225216 / +44 7749471065", "> Location : Singapore"];
 
 var i = 0; // initialise index
 var position = 0; // initialise text position
